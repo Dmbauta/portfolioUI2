@@ -1,0 +1,3 @@
+# portfolioUI2
+This is me building up my fronted skills with projects that I pick up from Figma design community...
+Big thanks to the designers
