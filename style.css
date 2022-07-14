@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  --primaryColor: #000;
+  --secondaryColor: #fff;
+  --tetiaryColor: #00cf2e;
+  --fourthColor: #bababa;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  scroll-behavior: smooth;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--secondaryColor);
+}
+header {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border: 2px solid var(--secondaryColor);
+  padding: 0 8px;
+  border-radius: 8px;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.menu li {
+  margin-left: 60px;
+  transition: 0.2s ease-in;
+}
+.menu li:hover {
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+.menu li a {
+  text-transform: uppercase;
+}
+.hero {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  margin: 0px auto;
+  padding: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 8em;
+  text-transform: capitalize;
+  line-height: 1;
+}
+.hero p {
+  font-size: 1.5em;
+  margin: 40px 0;
+  color: var(--fourthColor);
+}
+.work {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--primaryColor);
+  color: var(--secondaryColor);
+}
+.heading {
+  font-size: 3em;
+  padding: 40px 0;
+  width: 100%;
+  text-align: center;
+}
+.workContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.workbox {
+  position: relative;
+  width: 520px;
+  object-fit: cover;
+}
+.imgBox {
+  width: 100%;
+  height: 100%;
+}
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.workDesc {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  opacity: 0;
+  transition: 0.1s ease-out;
+  padding: 20px 40px;
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+.workbox:hover .workDesc {
+  opacity: 1;
+}
+
+.service {
+  background: var(--primaryColor);
+  color: var(--secondaryColor);
+}
+.serviceContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.box {
+  width: 400px;
+  height: 320px;
+  margin: 20px;
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+  position: relative;
+  padding: 40px;
+}
+.box h3,
+.workDesc h3 {
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+.box h5,
+.workDesc h5 {
+  font-size: 1em;
+  padding-top: 20px;
+  cursor: pointer;
+}
+.box h5:hover,
+.workDesc h5:hover {
+  text-decoration: underline;
+  width: fit-content;
+}
+.price {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--tetiaryColor);
+  color: var(--secondaryColor);
+  padding: 10px 40px;
+}
+.team {
+  color: var(--secondaryColor);
+  background-color: var(--primaryColor);
+  width: 100%;
+}
+.team > p {
+  width: 80%;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.profile {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.teamProfile {
+  position: relative;
+  width: 280px;
+  height: 420px;
+}
+.name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  padding: 10px;
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+  z-index: 5;
+  transition: 0.1s;
+  opacity: 0;
+}
+.right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 10px;
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+  z-index: 5;
+  transition: 0.1s;
+  opacity: 0;
+}
+.name h3,
+.right h3 {
+  font-size: 1.5em;
+}
+.teamProfile:hover .name {
+  opacity: 1;
+}
+.teamProfile:hover .right {
+  opacity: 1;
+}
+.teamProfile .imgBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.contact {
+  background: var(--primaryColor);
+  color: var(--secondaryColor);
+  width: 100%;
+  padding-bottom: 100px;
+}
+.contactAddress {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  line-height: 2;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+.social p {
+  margin-left: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  opacity: 0.5;
+  width: 100px;
+  transition: 0.3s;
+  padding: 8px 0;
+}
+.social p:hover {
+  opacity: 1;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+footer a {
+  color: var(--primaryColor);
+  text-decoration: underline;
+  font-weight: 600;
+}
+footer p {
+  margin-left: 20px;
+}
+.copyright {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+}
+.privacy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 240px;
+}
+@media (max-width: 1080px) {
+  .hero h2 {
+    font-size: 6em;
+  }
+}
+@media (max-width: 960px) {
+  header {
+    padding: 30px 40px;
+  }
+  .menu li {
+    margin-left: 30px;
+  }
+  .hero {
+    padding: 80px 60px;
+  }
+  .hero h2 {
+    font-size: 4em;
+  }
+  .hero p {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+  .menuToggle {
+    background: url(./menu.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 30px;
+    background-position: center;
+    transition: 0.3s;
+    filter: invert(1);
+  }
+  .menuToggle.active {
+    background: url(./close.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 30px;
+    background-position: center;
+    filter: invert(1);
+    z-index: 10;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+  }
+  .menu.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--primaryColor);
+    z-index: 5;
+  }
+  .menu.active li {
+    padding: 10px 0;
+    margin-left: 0;
+  }
+  .hero {
+    padding: 60px 30px;
+  }
+  .hero h2 {
+    font-size: 3em;
+  }
+}
+@media (max-width: 420px) {
+  header {
+    padding: 20px;
+  }
+  .menuToggle.active {
+    top: 20px;
+    right: 20px;
+  }
+  .box {
+    margin: 10px;
+    padding: 30px;
+  }
+  .box h3,
+  .workDesc h3 {
+    font-size: 1.5em;
+  }
+  .workDesc p {
+    display: none;
+  }
+  .workDesc h5 {
+    padding: 0;
+  }
+  .teamProfile {
+    height: 280px;
+  }
+  .workDesc {
+    padding: 10px 20px;
+  }
+}
